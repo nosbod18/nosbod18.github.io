@@ -19,10 +19,142 @@ p::first-letter {
     color: #a11841;
 }
 
-.content {
-    margin: 2% 20% 1rem 20%;
+.indented {
+    text-indent: 2em;
 }
 
-.indented-paragraph {
-    text-indent: 2em;
+.content {
+    margin: 2% 25%;
+}
+
+.image {
+    text-align: center;
+}
+
+/* About Page */
+
+.about .content {
+    display: grid;
+    grid-template-areas:
+        'intro-p intro-p pic1'
+        'pic2 deep-dive-p deep-dive-p'
+        'pic3 deep-dive-p deep-dive-p';
+    grid-gap: 2rem;
+}
+
+@media all and (max-width: 700px) {
+    .about .content {
+        display: grid;
+        grid-template-areas:
+        'intro-p intro-p'
+        'pic1 pic1'
+        'deep-dive-p deep-dive-p'
+        'deep-dive-p deep-dive-p'
+        'pic2 pic3';
+        grid-gap: 1rem;
+    }
+}
+
+.about .intro-p     { grid-area: intro-p; }
+.about .pic1        { grid-area: pic1; }
+.about .pic2        { grid-area: pic2; }
+.about .deep-dive-p { grid-area: deep-dive-p; }
+.about .pic3        { grid-area: pic3; }
+
+/* Project Page */
+
+.project .content {
+    display: grid;
+    grid-template-areas:
+        'project1 project2'
+        'project3 project4';
+    grid-gap: 2rem;
+}
+
+@media all and (max-width: 700px) {
+    .project .content {
+        display: grid;
+        grid-template-areas:
+        'project1'
+        'project2'
+        'project3'
+        'project4';
+        grid-gap: 1rem;
+    }
+}
+
+.project .thumbnail {
+    width: 100%;
+    margin: 0 5%;
+}
+
+.project .project1 { grid-area: project1; }
+.project .project2 { grid-area: project2; }
+.project .project3 { grid-area: project3; }
+.project .project4 { grid-area: project4; }
+
+
+/* Reflection page */
+
+.reflection .content {
+    display: grid;
+    grid-template-areas:
+    'pic1 pic2'
+    'section1 section1'
+    'pic3 pic3'
+    'section2 section2'
+    'pic4 pic5';
+    grid-gap: 2rem;
+}
+
+@media all and (max-width: 700px) {
+    .reflection .content {
+        display: grid;
+        grid-template-areas:
+        'pic1'
+        'pic2'
+        'section1'
+        'pic3'
+        'section2'
+        'pic4'
+        'pic5';
+        grid-gap: 1rem;
+    }
+}
+
+.reflection .pic1 {
+    grid-area: pic1;
+    width: 25%;
+    margin: 0 5%;
+}
+
+.reflection .pic2 {
+    grid-area: pic2;
+    width: 25%;
+    margin: 0 5%;
+}
+
+.reflection .section1 {
+    grid-area: section1;
+}
+
+.reflection .pic3 {
+    grid-area: pic3;
+    width: 30%;
+}
+
+.reflection .section2 {
+    grid-area: section2;
+}
+
+.reflection .pic4 {
+    grid-area: pic4;
+    width: 25%;
+    margin: 0 5%;
+}
+
+.reflection .pic5 {
+    grid-area: pic5;
+    width: 25%;
+    margin: 0 5%;
 }
