@@ -38,14 +38,14 @@ p::first-letter {
     text-align: center;
 }
 
-/* About Page */
+/* --- About Page --------------------------------------------------------- */
 
 .about .content {
     display: grid;
     grid-template-areas:
-        'intro-p intro-p pic1'
-        'pic2 deep-dive-p deep-dive-p'
-        'pic3 deep-dive-p deep-dive-p';
+        'section1 section1 pic1'
+        'pic2 section2 section2'
+        'pic3 section2 section2';
     grid-gap: 2rem;
 }
 
@@ -53,22 +53,88 @@ p::first-letter {
     .about .content {
         display: grid;
         grid-template-areas:
-        'intro-p intro-p'
+        'section1 section1'
         'pic1 pic1'
-        'deep-dive-p deep-dive-p'
-        'deep-dive-p deep-dive-p'
+        'section2 section2'
+        'section2 section2'
         'pic2 pic3';
         grid-gap: 1rem;
     }
 }
 
-.about .intro-p     { grid-area: intro-p; }
-.about .pic1        { grid-area: pic1; }
-.about .pic2        { grid-area: pic2; }
-.about .deep-dive-p { grid-area: deep-dive-p; }
-.about .pic3        { grid-area: pic3; }
+.about .content .section1 {
+    grid-area: section1;
+}
 
-/* Project Page */
+.about .content .pic1 {
+    grid-area: pic1;
+    height: auto;
+    max-width: 100%;
+}
+
+.about .content .pic2 {
+    grid-area: pic2;
+    height: auto;
+    max-width: 100%;
+}
+
+.about .content .section2 {
+    grid-area: section2;
+}
+
+.about .content .pic3 {
+    grid-area: pic3;
+    height: auto;
+    max-width: 100%;
+}
+
+@media print {
+    @page {
+        size: auto;
+        margin: 2.5cm;
+    }
+
+    .about {
+        background: transparent !important;
+        color: #000 !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+        font-family: serif;
+        margin: 0px;
+    }
+
+    .about nav {
+        display: none;
+    }
+
+    .about img {
+        display: none;
+    }
+
+    .about .content {
+        display: inline;
+    }
+
+    .about .content .section1 {
+        margin-bottom: 25px;
+    }
+
+    .about .content .section1 ul {
+        list-style: none;
+        display: block;
+        padding: none;
+    }
+
+    ul li::before {
+        content: "• ";
+    }
+
+    .about .content .section2 {
+        column-count: 3;
+    }
+}
+
+/* --- Project Page ------------------------------------------------------- */
 
 .project .content {
     display: grid;
@@ -101,7 +167,7 @@ p::first-letter {
 .project .project4 { grid-area: project4; }
 
 
-/* Reflection page */
+/* --- Reflection Page ---------------------------------------------------- */
 
 .reflection .content {
     display: grid;
