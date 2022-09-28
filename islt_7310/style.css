@@ -1,3 +1,8 @@
+@font-face {
+    font-family: Sketch;
+    src: url("Sketch\ 3D.otf");
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -7,6 +12,8 @@ h1 {
     color: #18a178;
     text-align: center;
     margin: 1.5rem;
+    font-family: Sketch, serif;
+    font-size: 5rem;
 }
 
 h3 {
