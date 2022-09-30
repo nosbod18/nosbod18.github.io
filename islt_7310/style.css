@@ -109,7 +109,7 @@ footer #copyright {
     grid-template-areas:
         'section1 section1 pic1'
         'pic2 section2 section2'
-        'pic3 section2 section2';
+        'video section2 section2';
     grid-gap: 2rem;
 }
 
@@ -122,7 +122,7 @@ footer #copyright {
         'section2 section2'
         'section2 section2'
         'pic2 pic2'
-        'pic3 pic3';
+        'video video';
         grid-gap: 1rem;
     }
 }
@@ -147,8 +147,8 @@ footer #copyright {
     grid-area: section2;
 }
 
-.about .content .pic3 {
-    grid-area: pic3;
+.about .content .video {
+    grid-area: video;
     height: auto;
     max-width: 100%;
 }
@@ -172,7 +172,7 @@ footer #copyright {
         display: none;
     }
 
-    .about img {
+    .about img, .about video {
         display: none;
     }
 
