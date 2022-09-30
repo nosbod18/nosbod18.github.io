@@ -37,11 +37,9 @@ footer {
     height: 60px;
     width: 100%;
 
-    padding: 20px;
-
     display: grid;
     grid-template-areas:
-        'name email phone copyright';
+        'name email-ico email phone-ico phone copyright';
 
     background-image: url("images/gradient.png");
     background-size: contain;
@@ -54,25 +52,38 @@ footer #name {
 }
 
 footer #email-ico {
-    grid-area: email;
+    grid-area: email-ico;
     width: 25px;
     height: 25px;
+    transition: transform .1s;
+    justify-self: end;
+}
+
+footer #email-ico:hover {
+    transform: scale(1.25);
 }
 
 footer #email {
     grid-area: email;
-    padding-left: 30px;
+    padding-left: 10px;
+    transition: transform .1s;
 }
 
 footer #phone-ico {
-    grid-area: phone;
+    grid-area: phone-ico;
     width: 25px;
     height: 25px;
+    transition: transform .1s;
+    justify-self: end;
+}
+
+footer #phone-ico:hover {
+    transform: scale(1.25);
 }
 
 footer #phone {
     grid-area: phone;
-    padding-left: 30px;
+    padding-left: 10px;
 }
 
 footer #copyright {
