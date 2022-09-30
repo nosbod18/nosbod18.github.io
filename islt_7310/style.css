@@ -1,11 +1,21 @@
 @font-face {
     font-family: Sketch;
-    src: url("Sketch\ 3D.otf");
+    src: url("Sketch 3D.otf");
 }
 
 * {
     margin: 0;
     padding: 0;
+}
+
+body {
+    background-color: #1a1a1d;
+}
+
+p, li {
+    color: #ddd;
+    font-family: sans-serif;
+    line-height: 1.25rem;
 }
 
 h1 {
@@ -17,13 +27,56 @@ h1 {
 }
 
 h3 {
+    color: #18a178;
     text-align: center;
 }
 
-p::first-letter {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #a11841;
+footer {
+    position: fixed;
+    bottom: 0;
+    height: 60px;
+    width: 100%;
+
+    padding: 20px;
+
+    display: grid;
+    grid-template-areas:
+        'name email phone copyright';
+
+    background-image: url("images/gradient.png");
+    background-size: contain;
+}
+
+footer #name {
+    grid-area: name;
+    margin-left: 25px;
+    padding-right: 25px;
+}
+
+footer #email-ico {
+    grid-area: email;
+    width: 25px;
+    height: 25px;
+}
+
+footer #email {
+    grid-area: email;
+    padding-left: 30px;
+}
+
+footer #phone-ico {
+    grid-area: phone;
+    width: 25px;
+    height: 25px;
+}
+
+footer #phone {
+    grid-area: phone;
+    padding-left: 30px;
+}
+
+footer #copyright {
+    grid-area: copyright;
 }
 
 .indented {
@@ -31,7 +84,7 @@ p::first-letter {
 }
 
 .content {
-    margin: 2% 25%;
+    margin: 2% 30%;
 }
 
 .image {
@@ -57,7 +110,8 @@ p::first-letter {
         'pic1 pic1'
         'section2 section2'
         'section2 section2'
-        'pic2 pic3';
+        'pic2 pic2'
+        'pic3 pic3';
         grid-gap: 1rem;
     }
 }
