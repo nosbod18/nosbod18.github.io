@@ -26,7 +26,8 @@ nav ul li ul {
     display: none;
     position: absolute;
     background-color: #212125;
-    margin-top: 10px;
+    margin-top: 9px;
+    margin-left: -14px;
     border-radius: 25px;
 }
 
@@ -49,6 +50,6 @@ nav a:hover {
 }
 
 nav ul li ul a {
-    text-align: left;
+    text-align: center;
     /* padding: 10px 25px 10px 20px; */
 }
