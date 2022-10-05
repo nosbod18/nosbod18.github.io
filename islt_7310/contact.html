@@ -1,10 +1,9 @@
 <!--
 ******************************************************************************
-    Title:      Home page
-    Brief:      The landing page for my website
-    Author:     Evan Dobson
-    Developed:  09/02/2022
-    Updated:    09/29/2022
+    Title:
+    Brief:
+    Author:
+    Developed:
 ******************************************************************************
 -->
 
@@ -12,13 +11,13 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Home page</title>
+    <title>Contact Me</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="nav.css">
     <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
 </head>
 <body>
-    <div class="index">
+    <div class="contact">
     <nav>
         <ul>
             <li><a href="index.html">Home</a></li>
@@ -40,21 +39,21 @@
     </header>
     <main>
         <div class="content">
-            <p>
-                Welcome to my website! This is where I put all my projects and other random things about me that you might
-                want to look at.</br></br>
-            </p>
-            <h3>Goals</h3>
-            <p class="indented">
-                I want this website to be an aesthetically pleasing medium to showcase my best projects and my hobbies.
-                My goal is to create a beast of a website which looks nice while still being very functional and intuitive.
-                I know next to nothing about web development, so I would like to use this website as a place to learn and
-                grow my abilities to develop a functional website and set me up to learn more things on my own about
-                scripting and different web frameworks to make my website look professional. I also would like to use this
-                website to develop my design skills. I am not a very creative person when it comes to design (especially
-                websites), and hopefully this website can break through that barrier to let the creative juices flow more
-                freely.
-            </p>
+            <form action="mailto:ejdwcf@missouri.edu?Subject=Portfolio/Professional%20Website%20Contact" method="post" enctype="text/plain">
+                <label for="fname">First Name:</label></br>
+                <input type="text" id="fname" name="fname" required></br></br>
+
+                <label for="lname">Last Name:</label></br>
+                <input type="text" id="lname" name="lname" required></br></br>
+
+                <label for="email">Email:</label></br>
+                <input type="email" id="email" name="email" required></br></br>
+
+                <label for="message">Message:</label></br>
+                <textarea> </textarea></br></br>
+
+                <input type="submit" id="send" value="Send">
+            </form>
         </div>
     </main>
     <footer>

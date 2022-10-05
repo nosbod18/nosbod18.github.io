@@ -12,7 +12,7 @@ body {
     background-color: #1a1a1d;
 }
 
-p, li {
+p, li, label {
     color: #ddd;
     font-family: sans-serif;
     line-height: 1.25rem;
@@ -51,7 +51,7 @@ footer #name {
     padding-right: 25px;
 }
 
-footer #email-ico {
+footer #mail-ico {
     grid-area: email-ico;
     width: 25px;
     height: 25px;
@@ -59,11 +59,11 @@ footer #email-ico {
     justify-self: end;
 }
 
-footer #email-ico:hover {
+footer #mail-ico:hover {
     transform: scale(1.25);
 }
 
-footer #email {
+footer #mail {
     grid-area: email;
     padding-left: 10px;
     transition: transform .1s;
@@ -81,7 +81,7 @@ footer #phone-ico:hover {
     transform: scale(1.25);
 }
 
-footer #phone {
+footer #footer-phone {
     grid-area: phone;
     padding-left: 10px;
 }
@@ -96,19 +96,22 @@ footer #copyright {
 
 .content {
     margin: auto;
-    width: 50%;
-    margin-bottom: 50px;
+    padding: 25px;
+    width: 45%;
+    margin-bottom: 75px;
+    text-align: justify;
+    /* border: 1px solid red; */
 }
 
 @media all and (max-width: 1200px) {
     .content {
-        margin: 2% 15%;
+        width: 55%;
     }
 }
 
 @media all and (max-width: 700px) {
     .content {
-        margin: 2% 5%;
+        width: 65%;
     }
 }
 
@@ -333,4 +336,34 @@ footer #copyright {
     grid-area: pic5;
     width: 25%;
     margin: 0 5%;
+}
+
+/* --- Contact Page ---------------------------------------------------- */
+
+.contact .content {
+    margin: auto;
+    width: calc(50vw - 15%);
+    /* max-width: 30%; */
+}
+
+@media all and (max-width: 900px) {
+    .contact .content {
+        margin: auto;
+        width: 45%;
+    }
+}
+
+.contact #fname, .contact #lname, .contact #email, .contact textarea {
+    width: 100%;
+    height: 1.5rem;
+    background-color: #ddd;
+}
+
+.contact textarea {
+    height: 10rem;
+}
+
+.contact #send {
+    padding: 0 8px;
+    font-size: 1.25rem;
 }
