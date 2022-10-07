@@ -31,6 +31,12 @@ h3 {
     text-align: center;
 }
 
+figcaption {
+    color: #ddd;
+    font-weight: bold;
+    text-align: center;
+}
+
 footer {
     position: fixed;
     bottom: 0;
@@ -341,22 +347,34 @@ footer #copyright {
 /* --- Contact Page ---------------------------------------------------- */
 
 .contact .content {
-    margin: auto;
-    width: calc(50vw - 15%);
-    /* max-width: 30%; */
+    display: grid;
+    grid-template-areas:
+        'form table';
+        grid-column-gap: 20%;
 }
 
 @media all and (max-width: 900px) {
     .contact .content {
-        margin: auto;
-        width: 45%;
+        grid-template-areas:
+            'form'
+            'table';
     }
 }
 
+.contact form {
+    grid-area: form;
+}
+
 .contact #fname, .contact #lname, .contact #email, .contact textarea {
-    width: 100%;
+    width: 150%;
     height: 1.5rem;
     background-color: #ddd;
+}
+
+@media all and (max-width: 900px) {
+    .contact #fname, .contact #lname, .contact #email, .contact textarea {
+        width: 100%;
+    }
 }
 
 .contact textarea {
@@ -366,4 +384,31 @@ footer #copyright {
 .contact #send {
     padding: 0 8px;
     font-size: 1.25rem;
+    margin-bottom: 30px;
+}
+
+.contact table {
+    grid-area: table;
+    text-align: left;
+    color: #ddd;
+    margin: auto 0 auto auto;
+    height: 50%;
+    width: 100%;
+    border: 2px solid black;
+}
+
+.contact th {
+    text-align: center;
+}
+
+.contact td {
+    padding: 10px;
+}
+
+.contact tr:nth-child(odd) {
+    background: rgb(92, 95, 117);
+  }
+
+.contact tr:nth-child(even) {
+    background: rgb(59, 64, 85);
 }

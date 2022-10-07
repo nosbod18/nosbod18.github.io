@@ -2,7 +2,7 @@ nav {
     background-color: #212125;
     text-align: center;
     border-radius: 50px;
-    margin: 2% 15%;
+    margin: 2% 25%;
     padding: 12px 0 10px 0;
 }
 
@@ -51,5 +51,4 @@ nav a:hover {
 
 nav ul li ul a {
     text-align: center;
-    /* padding: 10px 25px 10px 20px; */
 }
